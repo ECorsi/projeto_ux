@@ -1,78 +1,79 @@
 # Cenário de Análise/Problema
 
-> **_NOTE:_**: A equipe deve pensar em cenários existentes na atualidade (que causam problemas para os usuários) e que a interface prevista ajudará a resolver o problema. Cenário de Análise/Problema é uma história triste. Não descreve a solução. Descreve somente o problema.
+Usei o [perfil do usuário](3_perfil_usuario.md) e os [mapas de empatia](4_personas.md) para montar uma jornada atual para cada persona primária. As histórias combinam situações da coleta. A sequência e as emoções são hipóteses, porque o formulário não acompanhou a rotina de uma pessoa do início ao fim.
 
-1) **Cenário de Análise/Problema**
-- Escreva uma narrativa (não uma lista de requisitos) contando como a persona vive o problema hoje.
-- Baseie-se nas dores identificadas no [Perfil do Usuário](3_perfil_usuario.md) e no [Mapa de Empatia](4_personas.md) — não invente um problema novo.
-- Não mencione o produto/serviço que a equipe vai construir; a história descreve a vida da persona **antes** dele existir.
+## 1) Cenário de Análise/Problema
 
-2) **Questões de Refinamento**
-- Levante perguntas sobre o cenário que ainda ficaram em aberto: por que isso acontece? Acontece sempre ou só às vezes? Quem mais é afetado? O que a persona já tentou para resolver?
-- O objetivo é encontrar lacunas e suposições no cenário inicial, não respondê-las ainda.
+**Marcos — motorista de aplicativo.** Antes de começar a rodar, Marcos tenta descobrir quando precisa fazer a revisão do carro alugado. Ele olha o documento do carro e procura a informação no canal da locadora, mas ainda fica em dúvida sobre o prazo. Em outro dia, percebe um problema e fala direto com a locadora. Depois de avisar, não sabe qual é o próximo passo. Na devolução, recebe uma cobrança que não esperava e encontra só parte dos registros quando tenta entender o que aconteceu.
 
-3) **Refinamento do Cenário de Análise/Problema**
-- Reescreva o cenário incorporando as respostas às questões de refinamento, tornando-o mais específico, concreto e verificável.
+**Daniel — funcionário que usa carro alugado.** Daniel usa um carro alugado a serviço da empresa. Quando precisa conferir a próxima revisão, procura a informação no documento do carro. Em outra saída, percebe um problema e comunica à equipe da empresa. Ele fica sem saber se alguém já falou com a locadora ou se ainda precisa fazer alguma coisa. Quando precisa retomar o assunto, volta às mensagens para tentar descobrir quem ficou responsável.
 
-4) **Contexto de Uso**
-- Descreva o ambiente em que o problema ocorre (e onde o futuro produto/serviço deverá ser utilizado).
-- Qual/quais o(s) contexto(s) sociais, econômicos e culturais existentes neste ambiente?
-- Quais informações sobre o ambiente devem ser consideradas antes de qualquer interação?
-- O que normalmente está acontecendo no ambiente quando o problema ocorre?
+## 2) Questões de Refinamento
 
-5) **Jornada do Usuário (atual, sem solução)**
-- Descreva a jornada da persona enfrentando o problema **hoje**, do início ao fim do cenário — sem envolver o produto/serviço que a equipe vai construir.
-- Aponte, em cada etapa, o estado emocional da persona (frustração, confiança, dúvida, satisfação).
-- Complemente com um diagrama de jornada (`journey`) do Mermaid, agrupando as etapas em seções e atribuindo uma nota de 1 (péssimo) a 9 (ótimo) ao estado emocional de cada uma.
+| Persona | O que ainda preciso entender |
+| --- | --- |
+| **Marcos** | Por que o prazo fica difícil de encontrar? A dúvida acontece também quando a locadora informa a data? Depois de avisar sobre um problema, que retorno ele recebe? Quais registros fizeram falta na devolução? |
+| **Daniel** | Como ele decide se deve avisar a empresa ou a locadora? Quem assume o atendimento quando a empresa recebe o aviso? Como ele confirma o encaminhamento? O que já tentou fazer quando não recebeu uma orientação clara? |
 
----
+## 3) Refinamento do Cenário de Análise/Problema
 
-## Exemplo de entrega
+**Marcos.** Marcos consegue falar direto com a locadora, mas a comunicação inicial não resolve a dúvida sobre o que ele precisa fazer em seguida. Quando chega a devolução e aparece uma cobrança inesperada, ele consegue recuperar apenas parte dos registros. Usei como base três achados: os **4 motoristas** avaliaram a busca pelo prazo da revisão como “mais ou menos” ou “difícil”; dos **2** que avisaram diretamente a locadora, **1** ficou sem saber o que fazer; e, entre os **2** que relataram cobrança inesperada, **1** encontrou só parte dos registros. Ainda não sei quais registros faltaram nem se essas situações ocorreram juntas para a mesma pessoa.
 
-> Continuação do exemplo fictício do app "Estuda+", usando a persona [Marina Souza](4_personas.md). Copie a estrutura, não o conteúdo.
+**Daniel.** Daniel avisa a equipe da empresa. Quando volta às mensagens, consegue localizar o aviso que fez, mas ainda não sabe se alguém o encaminhou à locadora. Esse cenário usa um dos dois caminhos que apareceram na coleta: entre os **5 funcionários**, **2** avisaram sobre um problema, um diretamente à locadora e o outro pela empresa. A falta de confirmação é a hipótese que quero validar. A coleta não esclarece quem recebe o aviso dentro da empresa nem como o funcionário acompanha a resposta.
 
-### 1) Cenário de Análise/Problema
+## 4) Contexto de Uso
 
-Marina está no 4º semestre e, como sempre faz antes de provas, entra em um grupo de WhatsApp criado por uma colega para estudar Estruturas de Dados junto com mais quatro pessoas da turma. Na primeira semana, todo mundo manda mensagens animadas combinando encontros e trocando resumos. Mas ninguém definiu quem ficaria responsável por qual tópico, e aos poucos as mensagens ficam mais espaçadas. Duas semanas antes da prova, o grupo está praticamente silencioso — só restam mensagens antigas sem resposta. Marina não sabe se deve cobrar os colegas, criar outro grupo do zero ou simplesmente desistir e estudar sozinha, como acabou fazendo nas últimas duas vezes.
+| Aspecto | Marcos | Daniel |
+| --- | --- | --- |
+| **Ambiente e momento** | No celular, com o carro parado, antes de iniciar as corridas ou em uma pausa. | No celular ou com o documento do carro em mãos, antes ou depois de um deslocamento a serviço. |
+| **Contexto social e de trabalho** | Ele fala com a locadora e precisa encaixar a revisão na rotina de corridas. | Ele cuida do carro que usa no trabalho e, dependendo do caso, precisa passar o aviso pela empresa. |
+| **Canais e informações** | WhatsApp ou ligação, app ou site da locadora e documento do carro apareceram na coleta. Para entender o caso, importam o prazo informado, o que foi comunicado e a resposta recebida. | A coleta mostrou consultas em mais de um canal, inclusive com a equipe da empresa. Para entender o caso, importa saber a quem ele avisou e se alguém confirmou o encaminhamento. |
+| **Impacto na rotina** | A dúvida sobre a revisão ou o atendimento pode atrapalhar a organização das corridas. | A falta de retorno pode dificultar o planejamento do próximo deslocamento a serviço. |
 
-### 2) Questões de Refinamento
+Os locais, horários e impactos acima são possibilidades de uso que vou validar. A coleta não mediu perdas de renda ou tempo parado.
 
-- Isso acontece com todos os grupos de estudo da Marina ou só com alguns?
-- Por que ninguém assume a organização do grupo depois da primeira semana?
-- O problema é falta de ferramenta (lembrete, divisão de tarefas) ou falta de compromisso dos colegas?
-- Existe um momento específico em que o grupo começa a esvaziar?
-- Marina já tentou algo para reverter a situação? O que aconteceu?
+## 5) Jornada do Usuário — situação atual
 
-### 3) Refinamento do Cenário de Análise/Problema
+As notas de **1 (péssimo) a 9 (ótimo)** representam como cada persona pode se sentir no cenário.
 
-Nas três últimas vezes em que Marina participou de grupos de estudo, o padrão se repetiu: o grupo é criado de forma informal, sem que ninguém assuma explicitamente a organização, e sem dividir quem estuda qual tópico. Passada a primeira semana — justamente quando o volume de conteúdo aumenta e a rotina de estágio de Marina fica mais apertada —, as respostas somem. Ela já tentou mandar mensagem cobrando o grupo duas vezes, mas se sentiu "chata" fazendo isso e parou. O problema não é falta de vontade de estudar em grupo: é a ausência de qualquer estrutura (divisão de tópicos, lembretes, um responsável) que sustente o grupo depois do entusiasmo inicial.
+### Marcos — motorista de aplicativo
 
-### 4) Contexto de Uso
-
-- Marina usa o celular entre aulas e à noite, geralmente em casa ou na biblioteca da faculdade, com Wi-Fi ou 4G.
-- Contexto social: grupo de 4-6 colegas de turma, sem hierarquia definida — ninguém "responsável" formalmente pelo grupo.
-- O problema se intensifica na semana anterior às provas, quando o volume de conteúdo e a ansiedade aumentam.
-- Marina normalmente está com atenção dividida (entre uma aula e outra, ou cansada depois do estágio) quando tenta engajar o grupo.
-
-### 5) Jornada do Usuário (atual, sem solução) — Marina
-
-| Etapa | O que acontece | Estado emocional |
-| :---- | :---- | :---- |
-| 1. Criação do grupo | Uma colega cria um grupo no WhatsApp e convida a turma para estudar juntos. | Animada |
-| 2. Primeira semana | Mensagens trocadas com entusiasmo, mas sem definir quem estuda o quê. | Confiante |
-| 3. Silêncio no grupo | Colegas param de responder; ninguém assume a organização. | Frustrada |
-| 4. Tentativa de reverter | Marina manda uma mensagem cobrando o grupo; poucas ou nenhuma resposta. | Insegura |
-| 5. Véspera da prova | Marina desiste do grupo e estuda sozinha, sem saber se cobriu os tópicos certos. | Exausta / decepcionada |
+| Etapa | O que acontece hoje | Estado emocional |
+| --- | --- | --- |
+| 1. Procurar a revisão | Consulta o documento do carro e busca o prazo no canal da locadora. | Dúvida — **4** |
+| 2. Perceber um problema | Em outro momento, nota uma falha e precisa decidir como avisar. | Preocupação — **3** |
+| 3. Avisar a locadora | Entra em contato direto, mas não entende o que acontece em seguida. | Insegurança — **2** |
+| 4. Conferir a devolução | Recebe uma cobrança inesperada e encontra só parte dos registros ao tentar entendê-la. | Frustração — **1** |
 
 ```mermaid
 journey
-    title Jornada atual de Marina (sem solução)
-    section Formar o grupo
-      Colega cria grupo no WhatsApp: 8: Marina
-      Trocar mensagens animadas na 1ª semana: 7: Marina
-    section Grupo esvazia
-      Colegas param de responder: 3: Marina
-      Cobrar o grupo, sem retorno: 2: Marina
-    section Prova se aproxima
-      Estudar sozinha, sem saber se cobriu tudo: 1: Marina
+    title Jornada atual de Marcos
+    section Revisão
+      Procurar o prazo em mais de um canal: 4: Marcos
+    section Problema no carro
+      Perceber uma falha: 3: Marcos
+      Avisar a locadora sem entender o próximo passo: 2: Marcos
+    section Devolução
+      Receber uma cobrança e encontrar só parte dos registros: 1: Marcos
+```
+
+### Daniel — funcionário que usa carro alugado
+
+| Etapa | O que acontece hoje | Estado emocional |
+| --- | --- | --- |
+| 1. Conferir a revisão | Consulta o documento do carro antes de um deslocamento a serviço. | Atenção — **5** |
+| 2. Perceber um problema | Nota uma falha e precisa decidir se fala com a empresa ou com a locadora. | Dúvida — **3** |
+| 3. Avisar a empresa | Envia o relato à equipe, mas ainda não sabe se chegou à locadora. | Incerteza — **3** |
+| 4. Buscar um retorno | Volta às mensagens para descobrir quem ficou com o caso e o que precisa fazer. | Frustração — **2** |
+
+```mermaid
+journey
+    title Jornada atual de Daniel
+    section Revisão
+      Conferir a revisão no documento do carro: 5: Daniel
+    section Problema no carro
+      Perceber uma falha e decidir quem avisar: 3: Daniel
+      Avisar a empresa sem confirmação de encaminhamento: 3: Daniel
+    section Acompanhamento
+      Voltar às mensagens para descobrir o próximo passo: 2: Daniel
 ```
