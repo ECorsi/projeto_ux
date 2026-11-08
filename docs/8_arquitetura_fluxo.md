@@ -135,6 +135,6 @@ flowchart TD
     I --> J["Conferir data e informações registradas"]
 ```
 
-## Telas para desenhar primeiro
+## Primeiros passos da prototipação
 
-Vou começar por **Acesso** e **Início**. Em seguida, vou desenhar **Próxima revisão**, **Solicitar agendamento**, **Detalhe da solicitação**, **Novo chamado**, **Lista e detalhe de chamados** e **Histórico**. Nas primeiras versões, vou representar também os estados que fazem diferença no teste: **acesso não liberado**, **aguardando confirmação**, **confirmado**, **chamado registrado**, **sem orientação**, **sem registros** e **falha de envio ou carregamento**.
+Vou começar por **Acesso** e **Início**. Em seguida, vou desenhar **Próxima revisão**, **Solicitar agendamento**, **Detalhe da solicitação**, **Novo chamado**, **Lista e detalhe de chamados** e **Histórico**. Nas primeiras versões, vou representar também os estados que fazem diferença: **acesso não liberado**, **aguardando confirmação**, **confirmado**.
