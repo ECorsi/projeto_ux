@@ -1,54 +1,40 @@
 # Pesquisa e Coleta de Dados com Usuários
 
-> **_NOTE:_**: O objetivo desta entrega é planejar e registrar como a equipe vai ouvir os usuários reais (ou representativos do público-alvo) antes de avançar para personas e cenários. Não é para relatar impressões da equipe — é para descrever o que será perguntado, para quem, como e por quê.
+## 1) Identificação de Necessidades dos Usuários e Requisitos de UX
 
-1) **Identificação de Necessidades dos Usuários e Requisitos de UX**
-- Que dados coletar? (comportamentos, dores, expectativas, contexto de uso, frequência de uso, nível de familiaridade com tecnologia, etc.)
-- De quem coletar? (perfil do público-alvo e critérios de seleção dos participantes — quantos, onde encontrá-los)
+**O que eu quis entender?**
 
-2) **Aspectos Éticos**
-- Seu projeto deverá considerar aspectos éticos? Justifique usando os conceitos da aula.
-- Como o consentimento dos participantes será obtido (termo de consentimento)?
-- Como os dados coletados serão armazenados, anonimizados e descartados, considerando a LGPD?
+Comecei pela rotina de quem usa um carro alugado para trabalhar. Meu foco foi entender como o motorista de aplicativo acompanha as revisões, o que faz quando aparece um problema e quais registros consegue consultar na devolução. Também incluí funcionários da minha empresa que usam carros alugados. Organizei as perguntas em três situações:
 
-3) **Ferramentas de Coleta de Dados (três técnicas diferentes)**
+- **Revisão:** onde ele encontra o prazo e se é fácil descobrir quando precisa fazer a manutenção.
+- **Problema no carro:** se avisou a locadora e, quando avisou, se conseguiu entender o que aconteceria depois.
+- **Devolução:** se recebeu alguma cobrança por avaria, se esperava por ela e se conseguiu consultar registros da locação.
 
-> **_NOTE:_**: Escolher técnicas complementares (ex.: uma qualitativa individual, uma qualitativa em grupo, uma quantitativa), não três variações da mesma técnica.
+No fim do roteiro, perguntei qual dessas etapas a pessoa gostaria de melhorar primeiro. Com as respostas, quero decidir o que merece destaque na tela inicial, o que mostrar depois de abrir um chamado e quais registros guardar no histórico.
 
-Para cada instrumento, apresente:
-- Nome do instrumento e objetivo de aplicação
-- Explicar como aplicar (serve para normalizar o processo de aplicação quando pessoas distintas aplicam o instrumento)
-- Instrumento (por exemplo, link do questionário no Google Forms, roteiro de entrevista, roteiro do Grupo Focal, etc)
+**Quem eu busquei ouvir?**
 
----
+Defini como público principal os motoristas de aplicativo que usaram um carro alugado de locadora para trabalhar nos últimos 12 meses. Para chegar até eles, usei como estratégia o convite no fim das corridas que faço no dia a dia e deixei o formulário disponível para quem preferisse responder por conta própria. A divulgação em grupos foi o caminho previsto para alcançar mais motoristas.
 
-## Exemplo de entrega
+Também entrevistei funcionários da minha empresa que usam carros alugados no trabalho. Incluí esse perfil porque, na nossa rotina, o funcionário que usa o carro é responsável pelo cuidado no dia a dia: precisa acompanhar as revisões e avisar quando aparece um problema. A diferença é que ele pode comunicar o problema à empresa, que então fala com a locadora.
 
-> O exemplo abaixo é fictício — usa como cenário um app universitário de organização de grupos de estudo ("Estuda+") apenas para ilustrar o **nível de detalhe e formato** esperado. Não copie o conteúdo, copie a estrutura.
+A meta inicial foi de **3 a 5 entrevistas rápidas** e **10 a 15 respostas espontâneas**. Esses números foram usados para planejar a coleta. Na análise, vou comparar os perfis para entender o que eles têm em comum e onde os caminhos são diferentes. A pesquisa cobre a experiência de quem usa o carro; para entender o processo interno da locadora, eu precisaria ouvir quem faz esse atendimento.
 
-### 1) Identificação de Necessidades dos Usuários e Requisitos de UX
+## 2) Aspectos Éticos
 
-**Que dados coletar?**
-- Como os alunos hoje organizam sessões de estudo em grupo (ferramentas usadas, frequência).
-- Principais dificuldades para combinar horários e manter o grupo engajado.
-- Expectativas sobre lembretes, divisão de tópicos de estudo e acompanhamento de progresso.
+Defini que a participação seria voluntária nos dois formatos. Na entrevista, eu faço o convite diretamente e a pessoa pode recusar, pular perguntas ou parar. No formulário, ela decide se quer participar antes de passar para a triagem.
 
-**De quem coletar?**
-- Alunos de graduação de Ciência da Computação, do 2º ao 6º semestre, que já participaram de pelo menos um grupo de estudo nos últimos 6 meses.
-- Amostra mínima: 8 alunos para entrevistas, 40 respostas para o questionário.
-- Recrutamento: convite em grupos de turma no WhatsApp/Discord.
+- **Consentimento:** o termo explica o objetivo do trabalho, como vou usar as respostas e que a pessoa pode desistir. Ele vem antes das perguntas nos dois formatos,no questionário o usuário quem ira ler, e na entrevista, eu leio para o usuário.
+- **Privacidade:** o roteiro não pede nome, telefone, e-mail, placa ou número de contrato. Desativei a coleta de e-mails no formulário. A entrevista foi planejada para registrar as opções escolhidas, sem gravação.
+- **Armazenamento e descarte:** o acesso aos registros fica restrito a mim. Em até 30 dias depois da avaliação final, vou apagar os registros brutos e manter somente o resumo sem identificação.
 
-### 2) Aspectos Éticos
+## 3) Ferramentas de Coleta de Dados
 
-Sim, o projeto envolve dados pessoais de participantes (nome, e-mail, respostas sobre hábitos de estudo), portanto:
-- Será aplicado um **Termo de Consentimento Livre e Esclarecido (TCLE)** antes de qualquer coleta, explicando objetivo da pesquisa, uso dos dados e direito de desistência a qualquer momento.
-- Os dados serão coletados de forma **anonimizada** (sem nome/e-mail nas respostas do questionário) e armazenados apenas na equipe, em conformidade com a LGPD (Lei n.º 13.709/2018).
-- Gravações de entrevista serão apagadas ao final do projeto, mantendo-se apenas as transcrições anonimizadas usadas na análise.
+Usei **o mesmo roteiro de nove perguntas em dois formatos**. As opções, a ordem e os pulos são iguais. O que muda é quem preenche: na entrevista, eu leio as perguntas e registro as respostas; no questionário, a própria pessoa preenche. O campo **Origem do registro** distingue **Entrevista** de **Resposta espontânea**.
 
-### 3) Ferramentas de Coleta de Dados
+| Instrumento | Objetivo | Como funciona | Link ou roteiro |
+| --- | --- | --- | --- |
+| **Entrevista rápida** | Ouvir motoristas de aplicativo e funcionários que usam carros alugados. | Faço o convite individualmente, leio as perguntas e marco as opções escolhidas. O limite previsto é de **5 minutos**. | [Instruções para a entrevista](https://docs.google.com/forms/d/e/1FAIpQLScI7k_l0CKEQ3MsF9oWNPOfru6FhGxvoP6ti05AkEd9SJqWcQ/viewform)|
+| **Questionário on-line** | Receber respostas de quem prefere participar por conta própria. | A pessoa acessa o link, aceita participar e preenche no próprio horário. O tempo previsto é de **até 5 minutos**. | [Formulário para responder](https://docs.google.com/forms/d/e/1FAIpQLScI7k_l0CKEQ3MsF9oWNPOfru6FhGxvoP6ti05AkEd9SJqWcQ/viewform)|
 
-| Instrumento | Objetivo | Como aplicar | Link/Roteiro |
-| :---- | :---- | :---- | :---- |
-| **Entrevista semiestruturada** | Entender em profundidade como os alunos organizam e mantêm grupos de estudo, e onde o processo falha. | Sessão individual de 20-30 min, presencial ou por chamada de vídeo. Seguir o roteiro fixo, mas permitir perguntas de aprofundamento ("por quê?", "pode dar um exemplo?"). Gravar com autorização e transcrever depois. | Roteiro: 1) Como você organiza sessões de estudo hoje? 2) Conte sobre a última vez que um grupo de estudo não funcionou. 3) O que faria você usar um app específico para isso? |
-| **Questionário (Google Forms)** | Quantificar ferramentas usadas, frequência de grupos de estudo e principais frustrações, em uma amostra maior. | Divulgar o link em grupos de turma, aberto por 1 semana. Sem identificação pessoal, tempo estimado de resposta de 5 min. | `https://forms.google.com/exemplo-estuda-mais` *(placeholder — substituir pelo link real)* |
-| **Grupo focal** | Observar a discussão entre alunos sobre o que tornaria um grupo de estudo "bom", captando divergências de opinião difíceis de obter em entrevista individual. | Sessão única com 5-6 alunos, 45 min, mediada por um membro da equipe seguindo um roteiro de tópicos, com outro membro registrando anotações. | Roteiro de tópicos: hábitos atuais, ferramentas testadas e abandonadas, o que faria o grupo "durar" até a prova. |
+**Encerramento da etapa:** terminei a coleta prevista para esta entrega. Agora vou organizar as respostas por perfil e por situação: revisão, comunicação do problema, atendimento e devolução. Na hora de comparar as respostas, vou contar apenas quem chegou a cada pergunta. Por exemplo, só avalio a clareza do próximo passo entre quem comunicou um problema. A partir do que aparecer na coleta, vou montar as personas e as jornadas e definir quais necessidades o aplicativo deve atender primeiro.
