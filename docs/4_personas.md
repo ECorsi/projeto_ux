@@ -1,55 +1,58 @@
 # Personas
 
-> **_NOTE:_**: A Persona transforma o Perfil do Usuário (dados reais, agregados) em um arquétipo fictício único, que humaniza o público-alvo e orienta decisões de design. Use o segmento priorizado na etapa anterior como base — não invente características que contradigam a pesquisa.
+Montei estas personas a partir do [perfil do usuário](3_perfil_usuario.md). Escolhi três personagens masculinos para representar os perfis. Os nomes, retratos e frases são fictícios; não são nomes, fotos ou falas de entrevistados. A coleta não registrou idade, gênero nem nível de familiaridade com tecnologia.
 
-- Apresente apenas as personas primárias (o(s) segmento(s) priorizado(s) no Perfil do Usuário). Personas secundárias só se forem realmente necessárias para alguma decisão de design.
-- Para cada persona, apresente: nome, foto de rosto, idade, ocupação, uma frase/citação que resuma sua motivação ou frustração principal, objetivos em relação ao produto/serviço e nível de familiaridade com tecnologia.
-- Toda característica da persona deve ser rastreável aos dados coletados na pesquisa (não adicione traços "porque parece razoável").
+## Persona primária 1 — Marcos, motorista de aplicativo
 
-> **_NOTE:_**: Cada persona deve ter uma foto de rosto que a represente. Vocês podem utilizar esse [site](https://thispersondoesnotexist.com/) para gerar as fotos.
-
-# Mapa de Empatia
-
-![Mapa de empatia](imagens/empatia.png)
-
-- Determine o mapa de empatia[1] de pelo menos duas personas primárias e uma secundária.
-  - O que o usuário vê: aqui estamos falando do ambiente visual em que o usuário se encontra. Ou seja, o que ele efetivamente enxerga, as pessoas e objetos que estão ao seu redor. Isso ajuda a entender o contexto em que o usuário está inserido e as influências visuais que está recebendo.
-  - O que o usuário ouve: neste quadrante, buscamos entender o que o usuário está ouvindo, os sons que o cercam e como eles influenciam suas ações.
-  - O que o usuário diz e faz: aqui consideramos ações e comportamentos que o usuário apresenta durante sua interação com serviço ou produto.
-  - O que o usuário pensa e sente: neste quadrante, buscamos entender os pensamentos, sentimentos, emoções e percepções que o usuário tem em relação ao serviço ou produto. Quais expectativas o usuário cria sobre o serviço ou produto? Que tipo de serviço ou produto mais agrada essa persona?
-  - Dores: quando falamos sobre dores do usuário, estamos fazendo referência a quaisquer obstáculos, necessidades ou frustrações que o usuário possa experimentar ao tentar realizar uma tarefa ou alcançar um objetivo. Isso inclui, por exemplo, problemas de usabilidade, dificuldades de acesso ou outros desafios que podem afetar a experiência do usuário.
-  - Ganhos: nesse caso estamos falando de quaisquer benefícios ou recompensas que o usuário possa experimentar ao utilizar o serviço ou produto. Isso pode incluir economia de tempo ou facilidade de uso, por exemplo. Que desejos do usuário o serviço ou produto satisfaz?
-
-> **_NOTE:_**: Contexto de Uso e Jornada do Usuário ficam na próxima entrega ([Cenário de Análise/Problema](5_cenarios.md)).
-
----
-
-## Exemplo de entrega
-
-> Continuação do exemplo fictício do app "Estuda+", usando o segmento "Participante" priorizado no [Perfil do Usuário](3_perfil_usuario.md). Copie a estrutura, não o conteúdo.
-
-### Persona primária: Marina Souza
-
-![foto de rosto ilustrativa](imagens/random-person.jpeg)
+![Retrato fictício de Marcos](imagens/personas/marcos.png)
 
 | Campo | Descrição |
-| :---- | :---- |
-| **Idade** | 20 anos |
-| **Ocupação** | Estudante de Ciência da Computação (4º semestre), estagiária meio período |
-| **Citação** | "Eu entro no grupo animada, mas depois de duas semanas ninguém mais responde." |
-| **Objetivos** | Manter um grupo de estudo ativo até a prova, sem precisar ser ela quem cobra todo mundo. |
-| **Nível de tecnologia** | Alto — usa smartphone o dia todo, já usa WhatsApp/Discord para grupos de estudo. |
-| **Frustração principal** | Grupos de estudo perdem engajamento depois de 1-2 semanas; ninguém sabe quem devia estudar qual tópico. |
+| --- | --- |
+| **Ocupação** | Motorista de aplicativo que trabalha com carro alugado. |
+| **Frase-síntese** | “Quero saber quando é a revisão e o que fazer depois que aviso sobre um problema.” |
+| **Objetivos** | Conferir o prazo da próxima revisão, avisar a locadora e acompanhar o retorno. |
+| **Idade e tecnologia** | Idade e nível de familiaridade não medidos. Na coleta, esse perfil buscou o prazo por WhatsApp ou ligação, app ou site da locadora e documento ou etiqueta do carro. |
+| **Frustração principal** | Descobrir o prazo e entender o próximo passo do atendimento. Os **4 motoristas** avaliaram a busca pelo prazo como “mais ou menos” ou “difícil”; **2 de 4** escolheram melhorar o acompanhamento. |
 
-### Mapa de Empatia — Marina
+## Persona primária 2 — Daniel, funcionário que usa carro alugado
+![Retrato fictício de Daniel](imagens/personas/daniel.png)
 
-| Quadrante | Descrição |
-| :---- | :---- |
-| **Vê** | Grupos de WhatsApp silenciosos, mensagens antigas sem resposta, colegas postando resumos de estudo no Instagram. |
-| **Ouve** | Colegas comentando "vamos criar um grupo pra prova" — que raramente vinga; professor cobrando conteúdo acumulado perto da prova. |
-| **Diz e faz** | Entra em grupos recém-criados com entusiasmo; para de responder quando ninguém mais participa; estuda sozinha nas últimas semanas antes da prova. |
-| **Pensa e sente** | Acha que estudar em grupo ajudaria mais; sente-se culpada por "abandonar" grupos; insegura sobre se está estudando o conteúdo certo. |
-| **Dores** | Falta de clareza sobre quem estuda o quê; ausência de lembretes; grupos que morrem sem ninguém assumir a organização. |
-| **Ganhos** | Divisão automática de tópicos, lembretes de sessão, sensação de progresso visível do grupo. |
+| Campo | Descrição |
+| --- | --- |
+| **Ocupação** | Funcionário que usa um carro alugado a serviço da empresa e cuida dele no dia a dia. |
+| **Frase-síntese** | “Se aparecer um problema, quero saber quem devo avisar e se alguém já recebeu meu relato.” |
+| **Objetivos** | Conferir a revisão, registrar um problema e saber se deve falar com a empresa ou direto com a locadora. |
+| **Idade e tecnologia** | Idade e nível de familiaridade não medidos. O grupo relatou consulta por documento ou etiqueta, app ou site, WhatsApp ou ligação e equipe da empresa. |
+| **Frustração principal** | O caminho do aviso pode variar. Dos **2 funcionários que avisaram** sobre um problema, **1** procurou a locadora e **1** avisou pela empresa. |
 
-[1] Fonte: Adaptado de <https://hazeshift.com.br/mapa-de-empatia/>
+## Persona secundária — Renato, ponto de contato da empresa
+
+![Retrato fictício de Renato](imagens/personas/renato.png)
+
+| Campo | Descrição |
+| --- | --- |
+| **Ocupação** | Funcionário que pode receber e encaminhar avisos sobre os carros usados pela equipe. |
+| **Frase-síntese** | “Quando o aviso chegar para mim, preciso entender o problema e saber para quem encaminhar.” |
+| **Objetivo e uso no app** | Consultar ou encaminhar um relato quando a empresa for o primeiro contato. A interação seria pontual. |
+| **Idade e tecnologia** | Não coletadas. Esse papel não foi entrevistado. |
+| **Por que incluí** | Um funcionário relatou ter avisado pela empresa. Uso esse perfil como hipótese para decidir como encaminhar o chamado e mostrar quem ficou responsável. |
+
+## Mapas de empatia — personas primárias
+
+As ações e dores abaixo partem da coleta. O que cada pessoa ouve, pensa e sente é uma hipótese do cenário, porque o formulário não perguntou isso diretamente. Os ganhos são o que quero oferecer com o app.
+
+| Quadrante | Marcos | Daniel |
+| --- | --- | --- |
+| **Vê** | Prazo da revisão em canais diferentes, como app, mensagens ou documento do carro. | Informações no documento do carro, nos canais da locadora ou com a equipe. |
+| **Ouve** | Pode receber orientações da locadora após avisar. | Pode receber orientações da equipe ou da locadora. |
+| **Diz e faz** | Procura o prazo e, quando comunica um problema, pode avisar direto à locadora. | Confere a revisão e pode avisar pela empresa ou direto à locadora. |
+| **Pensa e sente** | Pode ficar em dúvida sobre o que fazer depois do aviso. | Pode querer confirmar quem recebeu o relato e quem vai cuidar dele. |
+| **Dores** | Descobrir o prazo e entender o próximo passo. | Descobrir o prazo e saber por qual canal o aviso deve seguir. |
+| **Ganhos** | Próxima revisão visível, confirmação do aviso e histórico fácil de consultar. | Aviso com destino claro e registro do encaminhamento. |
+
+## Contextos de uso — resumo para o documento 5
+
+- **Marcos:** com o carro parado, antes de começar a rodar ou em uma pausa, confere no celular quando precisa fazer a revisão. Se notar um problema, usa o app para avisar a locadora e volta depois para acompanhar a resposta.
+- **Daniel:** antes ou depois de um deslocamento a serviço, confere a revisão do carro que está usando. Se notar um problema, registra o que aconteceu e verifica se o aviso deve seguir pela empresa ou direto para a locadora.
+
+Esses dois contextos são cenários propostos para testar. Os horários e locais de uso não foram perguntados na coleta.
