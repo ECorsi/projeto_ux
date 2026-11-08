@@ -49,10 +49,3 @@ As ações e dores abaixo partem da coleta. O que cada pessoa ouve, pensa e sent
 | **Pensa e sente** | Pode ficar em dúvida sobre o que fazer depois do aviso. | Pode querer confirmar quem recebeu o relato e quem vai cuidar dele. |
 | **Dores** | Descobrir o prazo e entender o próximo passo. | Descobrir o prazo e saber por qual canal o aviso deve seguir. |
 | **Ganhos** | Próxima revisão visível, confirmação do aviso e histórico fácil de consultar. | Aviso com destino claro e registro do encaminhamento. |
-
-## Contextos de uso — resumo para o documento 5
-
-- **Marcos:** com o carro parado, antes de começar a rodar ou em uma pausa, confere no celular quando precisa fazer a revisão. Se notar um problema, usa o app para avisar a locadora e volta depois para acompanhar a resposta.
-- **Daniel:** antes ou depois de um deslocamento a serviço, confere a revisão do carro que está usando. Se notar um problema, registra o que aconteceu e verifica se o aviso deve seguir pela empresa ou direto para a locadora.
-
-Esses dois contextos são cenários propostos para testar. Os horários e locais de uso não foram perguntados na coleta.
