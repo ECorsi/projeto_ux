@@ -2,7 +2,6 @@
 
 **Projeto:** manutenção de veículos alugados por motoristas de aplicativo.  
 **Recorte:** planejar revisões, comunicar problemas à locadora e recuperar os registros na devolução.  
-**Data da análise:** 8 de novembro de 2026.
 
 ## 1. Concorrentes e interfaces de referência
 
