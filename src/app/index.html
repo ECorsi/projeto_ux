@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Central do Motorista</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="acesso.js" defer></script>
+</head>
+<body>
+  <main class="painel">
+    <header class="marca">
+      <img class="icone-carro" src="icone-carro.png" alt="">
+      <div>
+        <strong>Central do Motorista</strong>
+        <span>Manutenção do veículo</span>
+      </div>
+    </header>
+
+    <section id="tela-acesso" aria-labelledby="titulo-acesso">
+      <h1 id="titulo-acesso" tabindex="-1">Acesse seu veículo</h1>
+      <p>Informe a placa e o CPF do motorista para continuar.</p>
+
+      <form id="formulario-acesso" method="post">
+        <fieldset>
+          <legend>Tipo de locação</legend>
+          <div class="opcoes">
+            <label class="opcao">
+              <input type="radio" name="tipo" value="PF" required>
+              <span><strong>PF</strong><small>Em meu nome</small></span>
+            </label>
+            <label class="opcao">
+              <input type="radio" name="tipo" value="PJ">
+              <span><strong>PJ</strong><small>Pela empresa</small></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <label class="rotulo" for="placa">Placa do veículo</label>
+        <input class="campo" id="placa" type="text" placeholder="ABC1D23"
+          maxlength="8" autocapitalize="characters" autocomplete="off" spellcheck="false" required>
+
+        <label class="rotulo" for="cpf">CPF do motorista</label>
+        <input class="campo" id="cpf" type="text" inputmode="numeric"
+          placeholder="000.000.000-00" maxlength="14" autocomplete="on" required>
+
+        <p id="mensagem-acesso" role="alert"></p>
+        <button class="botao" type="submit">Entrar</button>
+        <p class="ajuda">Use os dados vinculados à sua locação.</p>
+      </form>
+    </section>
+
+    <section id="tela-inicio" aria-labelledby="titulo-inicio" hidden>
+      <h1 id="titulo-inicio" tabindex="-1">Início</h1>
+      <p id="saudacao"></p>
+      <div class="cartao">
+        <img class="foto-veiculo" src="fiat-argo.png" alt="Fiat Argo vermelho">
+        <h2>Fiat Argo</h2>
+        <p>Placa <span id="placa-veiculo"></span></p>
+        <p>Odômetro: 37.000 km</p>
+      </div>
+      <button class="cartao revisao" id="ver-manutencao" type="button">
+        <strong>Próxima revisão</strong>
+        <time datetime="2026-12-30">30/12/2026</time>
+        <span>Ver manutenções →</span>
+      </button>
+      <button class="botao botao-chamado" id="abrir-chamado" type="button">Abrir chamado</button>
+      <button class="botao voltar" id="sair" type="button">Sair</button>
+    </section>
+
+    <section id="tela-manutencao" aria-labelledby="titulo-manutencao" hidden>
+      <h1 id="titulo-manutencao" tabindex="-1">Manutenção</h1>
+      <p>Consulte o prazo da revisão e acompanhe suas solicitações.</p>
+
+      <div class="cartao revisao">
+        <h2>Próxima revisão preventiva</h2>
+        <time datetime="2026-12-30">30/12/2026</time>
+        <button class="botao" id="solicitar-manutencao" type="button">Solicitar agendamento</button>
+      </div>
+
+      <h2 class="titulo-lista">Solicitações de manutenção</h2>
+      <p id="mensagem-solicitacao" role="status"></p>
+      <div id="novas-solicitacoes"></div>
+
+      <details class="cartao solicitacao">
+        <summary>Revisão preventiva <span class="status pendente">Pendente</span></summary>
+        <p>Protocolo SOL-031</p>
+        <p>Data solicitada: 16/11/2026 às 09:00</p>
+        <p>Local a definir pela locadora.</p>
+      </details>
+      <details class="cartao solicitacao">
+        <summary>Troca de óleo <span class="status confirmado">Confirmado</span></summary>
+        <p>Protocolo SOL-029</p>
+        <p>Data aprovada: 16/11/2026 às 09:00</p>
+        <p>Oficina parceira · Unidade Centro</p>
+      </details>
+    </section>
+
+    <section id="tela-solicitacao" aria-labelledby="titulo-solicitacao" hidden>
+      <h1 id="titulo-solicitacao" tabindex="-1">Solicitar agendamento</h1>
+      <p>Escolha a data e o horário para enviar o pedido à locadora.</p>
+
+      <form id="formulario-solicitacao">
+        <div class="cartao dados-agendamento">
+          <h2>Fiat Argo</h2>
+          <p>Revisão preventiva · 37.000 km</p>
+        </div>
+
+        <label class="rotulo" for="data-revisao">Data de preferência</label>
+        <input class="campo" id="data-revisao" type="date" value="2026-11-16" required>
+
+        <label class="rotulo" for="hora-revisao">Horário de preferência</label>
+        <input class="campo" id="hora-revisao" type="time" value="09:00" required>
+
+        <label class="rotulo" for="detalhes-revisao">Detalhes (opcional)</label>
+        <textarea class="campo" id="detalhes-revisao" rows="3" maxlength="300"
+          placeholder="Algo que a locadora precisa saber?"></textarea>
+
+        <button class="botao" type="submit">Enviar solicitação</button>
+        <button class="botao voltar" id="cancelar-solicitacao" type="button">Voltar</button>
+      </form>
+    </section>
+
+    <section id="tela-chamados" aria-labelledby="titulo-chamados" hidden>
+      <h1 id="titulo-chamados" tabindex="-1">Chamados</h1>
+      <p>Registre um problema com o carro e acompanhe o retorno da locadora.</p>
+      <button class="botao botao-chamado" id="novo-chamado" type="button">Novo chamado</button>
+
+      <form id="filtros-chamados">
+        <fieldset class="campos-chamado">
+          <legend>Filtrar chamados</legend>
+          <div class="campo-data-filtro">
+            <label class="rotulo" for="filtro-data-chamado">Data de abertura</label>
+            <input class="campo" id="filtro-data-chamado" type="date">
+          </div>
+          <div>
+            <label class="rotulo" for="filtro-tipo-chamado">Tipo</label>
+            <select class="campo" id="filtro-tipo-chamado">
+              <option value="">Todos</option>
+              <option>Corretivo</option>
+              <option>Avaria</option>
+            </select>
+          </div>
+          <div>
+            <label class="rotulo" for="filtro-status-chamado">Status</label>
+            <select class="campo" id="filtro-status-chamado">
+              <option value="">Todos</option>
+              <option>Registrado</option>
+              <option>Em atendimento</option>
+              <option>Finalizado</option>
+            </select>
+          </div>
+        </fieldset>
+        <button class="botao-link" id="limpar-filtros-chamados" type="button">Limpar filtros</button>
+      </form>
+
+      <h2 class="titulo-lista">Meus chamados</h2>
+      <p class="mensagem-sucesso" id="mensagem-chamado" role="status"></p>
+      <p class="ajuda" id="sem-chamados" role="status" hidden>Nenhum chamado encontrado com esses filtros.</p>
+      <div id="lista-chamados">
+        <div id="chamados-registrados"></div>
+        <details class="cartao solicitacao chamado" data-data="08/11/2026" data-tipo="Corretivo" data-status="Em atendimento">
+          <summary>Ruído ao frear <span class="status pendente">Em atendimento</span>
+            <small class="dados-chamado">CH-026 · 08/11/2026 · Corretivo</small>
+          </summary>
+          <p>Descrição: ouvi um ruído ao frear.</p>
+          <button class="botao-link" type="button" data-abrir-os="OS-104">Ver OS-104</button>
+          <p><strong>Orientação:</strong> ainda não há uma orientação. Aguarde o retorno da locadora.</p>
+        </details>
+        <details class="cartao solicitacao chamado" data-data="27/10/2026" data-tipo="Corretivo" data-status="Finalizado">
+          <summary>Falha na partida <span class="status confirmado">Finalizado</span>
+            <small class="dados-chamado">CH-019 · 27/10/2026 · Corretivo</small>
+          </summary>
+          <p>Descrição: o carro falhou na primeira tentativa de partida.</p>
+          <button class="botao-link" type="button" data-abrir-os="OS-097">Ver OS-097</button>
+          <p><strong>Orientação:</strong> atendimento concluído pela locadora.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="tela-novo-chamado" aria-labelledby="titulo-novo-chamado" hidden>
+      <h1 id="titulo-novo-chamado" tabindex="-1">Novo chamado</h1>
+      <p>Conte o que aconteceu com o carro. A locadora vai acompanhar o chamado.</p>
+
+      <form id="formulario-chamado">
+        <div class="campos-chamado">
+          <div>
+            <label class="rotulo" for="numero-chamado">Nº do chamado</label>
+            <input class="campo" id="numero-chamado" type="text" readonly>
+          </div>
+          <div>
+            <label class="rotulo" for="placa-chamado">Placa</label>
+            <input class="campo" id="placa-chamado" type="text" readonly>
+          </div>
+          <div>
+            <label class="rotulo" for="data-chamado">Data de abertura</label>
+            <input class="campo" id="data-chamado" type="text" readonly>
+          </div>
+          <div>
+            <label class="rotulo" for="tipo-chamado">Tipo</label>
+            <select class="campo" id="tipo-chamado">
+              <option>Corretivo</option>
+              <option>Avaria</option>
+            </select>
+          </div>
+        </div>
+
+        <label class="rotulo" for="descricao-chamado">Descrição</label>
+        <textarea class="campo" id="descricao-chamado" rows="4" maxlength="500"
+          placeholder="Ex.: ouço um barulho quando freio." required></textarea>
+
+        <label class="rotulo" for="anexos-chamado">Fotos (opcional)</label>
+        <input class="campo" id="anexos-chamado" type="file" accept="image/*" multiple>
+
+        <div class="cartao dados-agendamento">
+          <p>Status: aguardando registro</p>
+          <p>Ordem de serviço: gerada após o registro</p>
+        </div>
+
+        <button class="botao" type="submit">Enviar chamado</button>
+        <button class="botao voltar" id="cancelar-chamado" type="button">Voltar</button>
+      </form>
+    </section>
+
+    <section id="tela-historico" aria-labelledby="titulo-historico" hidden>
+      <h1 id="titulo-historico" tabindex="-1">Histórico</h1>
+      <p>Consulte as ordens de serviço deste veículo.</p>
+
+      <form id="filtros-historico">
+        <fieldset>
+          <legend>Filtrar registros</legend>
+          <label class="rotulo" for="tipo-historico">Tipo</label>
+          <select class="campo" id="tipo-historico">
+            <option value="">Todos</option>
+            <option>Corretivo</option>
+            <option>Preventivo</option>
+            <option>Avaria</option>
+          </select>
+          <div class="campos-chamado">
+            <div>
+              <label class="rotulo" for="inicio-periodo">De</label>
+              <input class="campo" id="inicio-periodo" type="date">
+            </div>
+            <div>
+              <label class="rotulo" for="fim-periodo">Até</label>
+              <input class="campo" id="fim-periodo" type="date">
+            </div>
+          </div>
+          <button class="botao" type="submit">Pesquisar</button>
+          <button class="botao-link" id="limpar-historico" type="button">Limpar filtros</button>
+        </fieldset>
+      </form>
+
+      <h2 class="titulo-lista">Registros</h2>
+      <p class="ajuda" id="sem-registros" role="status" hidden>Nenhum registro encontrado com esses filtros.</p>
+      <div id="lista-historico"></div>
+    </section>
+
+    <section id="tela-ordem-servico" aria-labelledby="titulo-ordem-servico" hidden>
+      <button class="botao-link" id="voltar-os" type="button">Voltar</button>
+      <h1 id="titulo-ordem-servico" tabindex="-1">Detalhes da OS</h1>
+      <p id="resumo-os"></p>
+
+      <div class="cartao veiculo-os">
+        <img src="fiat-argo.png" alt="Fiat Argo vermelho">
+        <div>
+          <h2>Fiat Argo</h2>
+          <p id="placa-os"></p>
+        </div>
+      </div>
+
+      <div class="cartao">
+        <div class="linha-os">
+          <div>
+            <h2>Data de abertura</h2>
+            <time id="data-os"></time>
+          </div>
+          <span id="status-os" class="status"></span>
+        </div>
+        <p class="ajuda" id="orientacao-os"></p>
+      </div>
+
+      <h2 class="titulo-lista">Etapas do serviço</h2>
+      <ul class="cartao etapas-os" id="etapas-os"></ul>
+
+      <details class="cartao solicitacao" id="imagens-os">
+        <summary>Imagens</summary>
+        <p id="sem-imagens-os">Nenhuma imagem anexada.</p>
+        <div id="fotos-os"></div>
+      </details>
+      <details class="cartao solicitacao" id="observacoes-os">
+        <summary>Observações</summary>
+        <p id="texto-observacoes-os"></p>
+      </details>
+
+      <div id="chamado-vinculado-os" class="cartao" hidden>
+        <h2>Chamado vinculado</h2>
+        <button class="botao-link" id="ver-chamado-os" type="button"></button>
+      </div>
+    </section>
+
+    <nav id="menu-principal" aria-label="Menu principal" hidden>
+      <button class="botao-menu" id="menu-inicio" type="button">Início</button>
+      <button class="botao-menu" id="menu-manutencao" type="button">Manutenção</button>
+      <button class="botao-menu" id="menu-chamados" type="button">Chamados</button>
+      <button class="botao-menu" id="menu-historico" type="button">Histórico</button>
+    </nav>
+
+    <template id="modelo-solicitacao">
+      <details class="cartao solicitacao" open>
+        <summary>Revisão preventiva <span class="status pendente">Pendente</span></summary>
+        <p class="protocolo"></p>
+        <p class="data-solicitada"></p>
+        <p>Local a definir pela locadora.</p>
+        <p class="detalhes-solicitados" hidden></p>
+      </details>
+    </template>
+
+    <template id="modelo-chamado">
+      <details class="cartao solicitacao chamado">
+        <summary><span class="titulo-chamado"></span> <span class="status registrado">Registrado</span>
+          <small class="dados-chamado"></small>
+        </summary>
+        <p class="descricao-chamado"></p>
+        <button class="botao-link os-chamado" type="button"></button>
+        <p><strong>Orientação:</strong> ainda não há uma orientação. Aguarde o retorno da locadora.</p>
+        <div class="fotos-chamado"></div>
+      </details>
+    </template>
+
+    <template id="modelo-registro">
+      <button class="cartao registro-historico" type="button">
+        <strong class="titulo-registro"></strong>
+        <small class="dados-chamado"></small>
+        <span class="status registrado tipo-registro"></span>
+      </button>
+    </template>
+
+    <template id="modelo-etapa-os">
+      <li class="linha-os">
+        <span class="nome-etapa"></span>
+        <span class="status"></span>
+      </li>
+    </template>
+  </main>
+</body>
+</html>
