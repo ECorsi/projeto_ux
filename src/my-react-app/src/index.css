@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f8fafd;
+  color: #18243a;
+  font: 16px Roboto, Arial, sans-serif;
+}

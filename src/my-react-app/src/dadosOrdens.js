@@ -1,0 +1,52 @@
+// Registros fictícios usados em Chamados e Histórico.
+export const ordensIniciais = [
+  {
+    numero: 'OS-104',
+    chamado: 'CH-026',
+    titulo: 'Ruído ao frear',
+    data: '2026-11-08',
+    tipo: 'Corretivo',
+    status: 'Em atendimento',
+    descricao: 'Ouvi um ruído ao frear.',
+    orientacao: 'Aguarde o retorno da locadora.',
+    observacao: 'O motorista relatou um ruído ao frear. A inspeção dos freios está em análise.',
+    etapas: [
+      ['Recebimento do chamado', 'Concluída'],
+      ['Inspeção dos freios', 'Em análise'],
+      ['Troca de componentes', 'Não avaliada'],
+    ],
+    fotos: [],
+  },
+  {
+    numero: 'OS-097',
+    chamado: 'CH-019',
+    titulo: 'Falha na partida',
+    data: '2026-10-27',
+    tipo: 'Corretivo',
+    status: 'Finalizado',
+    descricao: 'O carro falhou na primeira tentativa de partida.',
+    orientacao: 'Atendimento concluído pela locadora.',
+    observacao: 'O carro foi testado após o atendimento e a partida funcionou normalmente.',
+    etapas: [
+      ['Recebimento do chamado', 'Concluída'],
+      ['Verificação da partida', 'Concluída'],
+      ['Teste do veículo', 'Concluída'],
+    ],
+    fotos: [],
+  },
+  {
+    numero: 'OS-082',
+    titulo: 'Revisão preventiva',
+    data: '2026-10-18',
+    tipo: 'Preventivo',
+    status: 'Finalizado',
+    orientacao: 'Revisão concluída pela locadora.',
+    observacao: 'A oficina registrou a troca de óleo e a conferência dos itens de revisão.',
+    etapas: [
+      ['Recebimento do veículo', 'Concluída'],
+      ['Troca de óleo', 'Concluída'],
+      ['Conferência dos itens de revisão', 'Concluída'],
+    ],
+    fotos: [],
+  },
+]
