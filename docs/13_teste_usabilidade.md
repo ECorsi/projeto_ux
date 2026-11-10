@@ -40,4 +40,4 @@ flowchart TD
 
 ## 3) Resultados do teste
 
-Ainda não realizei a sessão de testes assistidos 
+Não consegui para funcionários e motoristas para realizarem o teste do aplicativo após montagem completa.
